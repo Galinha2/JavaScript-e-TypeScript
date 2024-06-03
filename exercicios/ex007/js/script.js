@@ -20,7 +20,7 @@ function meuEscopo() {
         });
 
         console.log(pessoas);
-        
+
         escrever.innerHTML += `Nome: ${nome.value} <br />`;
         escrever.innerHTML += `Sobre Nome: ${sobreNome.value} <br />`;
         escrever.innerHTML += `Peso: ${peso.value} <br />`;
