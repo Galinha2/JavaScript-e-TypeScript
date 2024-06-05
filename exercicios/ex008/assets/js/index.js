@@ -1,7 +1,6 @@
 function meuEscopo () {
     const formulario = document.querySelector('.form');
     const result = document.querySelector('.resultado');
-    const resultNeg = document.querySelector('.resultadoNegativo');
 
     function pegaResultado (enviar) {
         enviar.preventDefault();
@@ -24,7 +23,7 @@ function meuEscopo () {
         } else if (imc >= 40) {
             result.innerHTML = `O seu imc é ${imc.toFixed(2)} (Obesidade Grau 3)`;
         } else {
-            resultNeg.innerHTML = `Valor introduzido inválido`;
+            result.innerHTML = `<p id='falso'>Valor introduzido inválido</p>`;
         }
         console.log(wheight, height);
         console.log(typeof(wheight), typeof(height));
