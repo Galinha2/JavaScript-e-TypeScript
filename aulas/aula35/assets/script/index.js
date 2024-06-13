@@ -6,15 +6,17 @@ const documentos = [
 ];
 
 const section = document.querySelector('#main');
-const div = section.querySelector('div');
+const div = document.createElement('div');
 
 function escreveTexto () {
 
     for (let i = 0; i < documentos.length; i ++) {
-        div.innerHTML += `<${documentos[i].tag}> ${documentos[i].texto} </ ${documentos[i].tag}>`;
-
-        console.log(`<${documentos[i].tag}> ${documentos[i].texto} </ ${documentos[i].tag}>`)
+        let { tag, texto } = documentos[i];
+        let tagCriada = document.createElement(tag);
+        tagCriada.innerHTML = texto;
+        div.appendChild(tagCriada);
     }
+    section.appendChild(div);
 }
 
 escreveTexto();
