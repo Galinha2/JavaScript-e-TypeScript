@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(45deg, rgb(155, 92, 92), rgb(77, 0, 73));
+    height: 100vh;
+    padding-top: 20%;
+}
+
+.main {
+    margin-top: 50px;
+    display: block;
+    margin: auto;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: rgba(62, 62, 62, 0.322);
+    min-height: 200px;
+    max-width: 600px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    color: rgb(220, 220, 220);
+    align-items: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.172);
+    margin-bottom: 20px;
+}
+
+.inputAdd {
+    margin-top: 20px;
+}
+
+.texto {
+    padding: 10px;
+    min-width: 400px;
+    border-radius: 50px;
+    border: 0px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.579);
+    height: 30px;
+    font-size: 0.9em;
+}
+
+button {
+    border: 0px;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100px;
+    font-size: 1.1em;
+    margin: 0px 10px;
+    color: rgb(99, 99, 99);
+    background-color: rgb(204, 204, 204);
+    cursor: pointer;
+}
+
+.adicionar {
+    height: 30px;
+    font-size: 1em;
+    padding: 0px;
+    border-radius: 50px;
+    border: 0px;
+    padding: 5px;
+    margin-left: 5px;
+    background-color: rgb(204, 204, 204);
+    cursor: pointer;
+    color: #4d4d4d;
+}
+
+button:hover, .adicionar:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.mainDois {
+    
+    margin: auto;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: rgba(62, 62, 62, 0.322);
+    min-height: 100px;
+    max-width: 400px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    color: rgb(220, 220, 220);
+    align-items: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.172);
+}
+
+li {
+    margin: 10px;
+    display: inline;
+}

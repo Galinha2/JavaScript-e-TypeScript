@@ -1,12 +1,18 @@
 function timmer() {
-    let segundos = 0;          
-    let minutos = 0;          
-    let horas = 0;  
+
+    const div = document.querySelector('.relogio');
+    const iniciar = document.querySelector('.iniciar');
+    const pausar = document.querySelector('.pausar');
+    const zerar = document.querySelector('.zerar');
+
+    let segundos = 0;
+    let minutos = 0;
+    let horas = 0;
 
     let cornometro;
 
-    function iniciaRelogio(segundos, minutos, horas) {
-        cornometro = setInterval(function() {
+    function iniciaRelogio() {
+        cornometro = setInterval(function () {
             segundos++;
 
             if (segundos === 59) {
@@ -32,23 +38,23 @@ function timmer() {
             return div.innerHTML = (`<p> ${dizHor}:${dizMin}:${dizSeg} </p>`);
         }, 1000);
     }
-    
-    iniciar.addEventListener('click', function(event) {
-        cleatInterval(timmer);
-        iniciaRelogio(segundos, minutos, horas);
-    })
-    pausar.addEventListener('click', function(event) {
-        clearInterval(cornometro);
-    })
-    zerar.addEventListener('click', function(event) {
-        clearInterval(cornometro);
-        return div.innerHTML = iniciaRelogio(0, 0, 0);
-    })
-}
 
-const div = document.querySelector('.relogio');
-const iniciar = document.querySelector('.iniciar');
-const pausar = document.querySelector('.pausar');
-const zerar = document.querySelector('.zerar');
- 
+    iniciar.addEventListener('click', function (event) {
+        div.classList.remove('pausado')
+        clearInterval(cornometro);
+        iniciaRelogio();
+    });
+    pausar.addEventListener('click', function (event) {
+        div.classList.add('pausado');
+        clearInterval(cornometro);
+    });
+    zerar.addEventListener('click', function (event) {
+        clearInterval(cornometro);
+        segundos = 0;
+        horas = 0;
+        minutos = 0;
+        div.innerHTML = `00:00:00`;
+    });
+};
+
 timmer();
