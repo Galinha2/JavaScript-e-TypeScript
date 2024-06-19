@@ -8,19 +8,9 @@
 }
 
 body {
-    background-image: linear-gradient(45deg, rgb(155, 92, 92), rgb(0, 59, 77));
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    padding-top: 20%;
+    background-image: linear-gradient(45deg, rgb(155, 92, 92), rgb(77, 0, 73));
     height: 100vh;
-}
-
-main {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-content: center;
+    padding-top: 20%;
 }
 
 .main {
@@ -76,10 +66,9 @@ button {
     border: 0px;
     padding: 5px;
     margin-left: 5px;
-    background-color: rgba(204, 204, 204, 0.435);
+    background-color: rgb(204, 204, 204);
     cursor: pointer;
-    color: #434040;
-    box-shadow: 0px 0px 5px rgba(45, 45, 45, 0.597);
+    color: #4d4d4d;
 }
 
 button:hover, .adicionar:hover {
@@ -95,19 +84,12 @@ button:hover, .adicionar:hover {
     min-height: 100px;
     max-width: 400px;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: center;
     align-content: center;
     color: rgb(220, 220, 220);
     align-items: center;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.172);
-}
-
-.recebeDiv {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 100%;
 }
 
 li {
@@ -119,23 +101,16 @@ li {
     color: white;
 }
 
-.apagar {
+div button {
     color: rgb(103, 103, 103);
     width: 40px;
-    height: 40px;
-    align-self: center;
 }
 
-.apagar:hover {
+div button:hover {
     color: red;
 }
 
 .main > p {
     color: red;
     margin-top: 10px;
-}
-
-.erase {
-    align-self: center;
-    justify-self: center;
 }
