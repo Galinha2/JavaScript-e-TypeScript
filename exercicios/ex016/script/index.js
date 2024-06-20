@@ -5,11 +5,15 @@ function addLista() {
     const mainDois = recebeBody.querySelector('#mainDois');
     const submit = recebeBody.querySelector('.adicionar');
 
+    let teste = apagaGeral();
+    mainDois.appendChild(teste);
+    
     function criaButton() {
+
         let button = document.createElement('button');
         button.textContent = 'X';
         button.classList.add('apagar');
-
+        
         return button;
     };
 
@@ -56,11 +60,20 @@ function addLista() {
     }
 
     document.addEventListener('click', function (event) {
-        const clique = event.target;
+        let clique = event.target;
+        event.preventDefault()
+
+        let apagaTudo = apagaGeral()
 
         if (clique.classList.contains('apagar')) {
             clique.parentElement.remove();
         };
+
+        if (clique.classList.contains('erase')) {
+            mainDois.innerHTML = '';
+            mainDois.appendChild(apagaTudo)
+        };
+
         guardarTudo();
     });
 
@@ -98,6 +111,14 @@ function addLista() {
 
             mainDois.appendChild(criaDiv);
         };
+    };
+
+    function apagaGeral () {
+        const erase = document.createElement('button');
+        erase.textContent = 'x';
+        erase.classList.add('erase');
+
+        return erase;
     };
 
     adicionar();
