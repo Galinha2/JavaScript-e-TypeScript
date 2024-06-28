@@ -9,7 +9,7 @@ function calcula () {
         display,
 
         inicia() {
-            this.pegaKey()
+            this.pegaKey();
         },
 
         escreve(texto) {
@@ -18,10 +18,15 @@ function calcula () {
         },
 
         fazconta() {
-            const conta = display.value;
+            let conta = this.display.value;
 
             try {
                 conta = eval(conta);
+
+                if (!conta) {
+                    return this.display.textContent('ERRO')
+                }
+
                 return this.display.value = conta;
             } catch (error) {
                 return this.display.value = 'ERROR';
@@ -38,7 +43,7 @@ function calcula () {
             } else if (el.classList.contains('btn-clear')) {
                 return this.display.value = '';
             } else if (el.classList.contains('btn-igual')) {
-                this.fazConta();
+                return this.fazConta();
             }
             });
         }

@@ -6,6 +6,10 @@
     padding: 0px;
 }
 
+body {
+    background-image: linear-gradient(45deg, rgb(0, 51, 71), rgb(37, 37, 37));
+}
+
 main {
     display: flex;
     flex-flow: column wrap;
@@ -65,7 +69,8 @@ td {
     width: 100%;
     height: 100%;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 1.4em;
 }
 
 .btn-top {
