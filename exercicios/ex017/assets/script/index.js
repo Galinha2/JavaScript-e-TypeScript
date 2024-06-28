@@ -21,14 +21,14 @@ function calcula() {
 
         fazConta(value) {
             let conta = value;
-        
+
             try {
                 conta = eval(conta);
 
                 if (!conta) {
                     return this.display.value = ('ERRO');
                 }
-                
+
                 this.contas.push(`${value} = ${conta}`);
 
                 let barra = document.querySelector('.textH');
@@ -64,7 +64,7 @@ function calcula() {
 
             for (conta of this.contas) {
                 if (this.contas.length > 10) {
-                    criaP.parentElement.remove();
+                    barra.parentElement.remove();
                 }
 
                 const criaP = document.createElement('p');

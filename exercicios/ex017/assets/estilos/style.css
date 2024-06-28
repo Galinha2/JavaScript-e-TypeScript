@@ -101,7 +101,8 @@ td {
     color: rgb(109, 109, 109);
 }
 
-.btn-side:hover, .historico:hover {
+.btn-side:hover,
+.historico:hover {
     background-color: rgb(234, 121, 0);
 }
 
@@ -148,7 +149,7 @@ td {
     text-align: center;
     font-size: 1em;
     margin-bottom: 10px;
-} 
+}
 
 
 .barra.show {
@@ -170,6 +171,7 @@ td {
     cursor: pointer;
     margin-top: 0px;
 }
+
 .pH {
     text-align: center;
     border-bottom: 1px solid white;
