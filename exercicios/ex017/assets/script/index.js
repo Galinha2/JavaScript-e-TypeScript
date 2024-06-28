@@ -69,7 +69,7 @@ function calcula() {
                 } else if (el.classList.contains('historico')) {
                     return this.criaHistorico();
                 } else if (el.classList.contains('close')) {
-                    el.parentElement.remove();;
+                    el.parentElement.remove();
                 }
             });
         }
