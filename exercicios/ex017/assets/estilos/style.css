@@ -121,15 +121,14 @@ td {
 
 .barra {
     background-color: #a2a2a24f;
-    width: 0px;
-    height: 300px;
+    min-width: 0px;
+    height: 320px;
     border-radius: 30px;
     align-self: center;
     justify-self: center;
-    margin-left: 0px;
     transition: .5s;
     margin-left: 10px;
-    margin-top: 50px;
+    margin-top: 40px;
     padding: 20px;
     color: white;
     display: flex;
@@ -142,8 +141,8 @@ td {
 .barra h1 {
     color: white;
     text-align: center;
-    font-size: .8em;
-    border-bottom: 1px solid white;
+    font-size: 1em;
+    margin-bottom: 20px;
 } 
 
 
@@ -165,4 +164,9 @@ td {
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
+}
+.pH {
+    text-align: center;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
 }

@@ -3,12 +3,13 @@ function calcula() {
     const documento = document.querySelector('main');
     const botoes = documento.querySelectorAll('.btn');
     const display = documento.querySelector('.display');
-    const barra = body.querySelector('.barra');
+
     return {
 
         documento,
         botoes,
         display,
+        contas: [],
 
         inicia() {
             this.pegaKey();
@@ -20,15 +21,24 @@ function calcula() {
 
         fazConta(value) {
             let conta = value;
-
+        
             try {
                 conta = eval(conta);
 
                 if (!conta) {
                     return this.display.value = ('ERRO');
                 }
+                
+                this.contas.push(`${value} = ${conta}`);
 
-                return this.display.value = conta;
+                let barra = document.querySelector('.textH');
+                if (barra) {
+                    let criaP = document.createElement('p');
+                    criaP.classList.add('pH');
+                    criaP.textContent = `${value} = ${conta}`;
+                    barra.appendChild(criaP);
+                }
+                this.display.value = conta;
             } catch (error) {
                 return this.display.value = 'ERRO';
             }
@@ -38,17 +48,29 @@ function calcula() {
             const barra = document.createElement('section');
             const criaH1 = document.createElement('h1');
             const close = document.createElement('button');
+            const text = document.createElement('section');
+
 
             barra.classList.add('barra');
             body.appendChild(barra);
             void barra.offsetWidth;
             barra.classList.add('show');
 
-            criaH1.textContent = 'HISTÓRICO';
+            criaH1.textContent = 'Histórico';
             barra.appendChild(criaH1);
-        
+
+            text.classList.add('textH');
+            barra.appendChild(text);
+
+            for (conta of this.contas) {
+                const criaP = document.createElement('p');
+                criaP.classList.add('pH')
+                criaP.textContent = conta;
+                text.appendChild(criaP);
+            }
+
             close.classList.add('close');
-            close.textContent = 'X';   
+            close.textContent = 'X';
             barra.appendChild(close);
 
             return barra, criaH1, close;
@@ -67,7 +89,8 @@ function calcula() {
                     let values = this.display.value;
                     return this.fazConta(values);
                 } else if (el.classList.contains('historico')) {
-                    return this.criaHistorico();
+                    const cl = document.querySelector('.close');
+                    return this.criaHistorico(), cl.parentElement.remove();
                 } else if (el.classList.contains('close')) {
                     el.parentElement.remove();
                 }
