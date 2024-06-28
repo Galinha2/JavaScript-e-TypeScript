@@ -3,7 +3,7 @@ function calcula() {
     const documento = document.querySelector('main');
     const botoes = documento.querySelectorAll('.btn');
     const display = documento.querySelector('.display');
-
+    const barra = body.querySelector('.barra');
     return {
 
         documento,
@@ -68,6 +68,8 @@ function calcula() {
                     return this.fazConta(values);
                 } else if (el.classList.contains('historico')) {
                     return this.criaHistorico();
+                } else if (el.classList.contains('close')) {
+                    el.parentElement.remove();;
                 }
             });
         }
