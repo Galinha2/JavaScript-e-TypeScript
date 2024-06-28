@@ -56,26 +56,23 @@ function calcula() {
             void barra.offsetWidth;
             barra.classList.add('show');
 
+            close.classList.add('close');
+            close.textContent = 'X';
+            barra.appendChild(close);
+
             criaH1.textContent = 'Histórico';
             barra.appendChild(criaH1);
 
             text.classList.add('textH');
             barra.appendChild(text);
 
-            for (conta of this.contas) {
-                if (this.contas.length > 10) {
-                    barra.parentElement.remove();
-                }
-
+            const recentContas = this.contas.slice(-10);
+            for (const conta of recentContas) {
                 const criaP = document.createElement('p');
-                criaP.classList.add('pH')
+                criaP.classList.add('pH');
                 criaP.textContent = conta;
                 text.appendChild(criaP);
             }
-
-            close.classList.add('close');
-            close.textContent = 'X';
-            barra.appendChild(close);
 
             return barra, criaH1, close;
         },
