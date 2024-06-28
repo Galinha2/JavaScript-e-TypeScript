@@ -8,6 +8,10 @@
 
 body {
     background-image: linear-gradient(45deg, rgb(0, 51, 71), rgb(37, 37, 37));
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
 }
 
 main {
@@ -16,11 +20,12 @@ main {
     height: 100vh;
     justify-content: center;
     align-content: center;
-    background-image: linear-gradient(45deg, rgb(0, 51, 71), rgb(37, 37, 37));
+    justify-self: center;
+    align-self: center;
 }
 
-h1 {
-    background-color: rgba(234, 121, 0, 0.755);
+.h1 {
+    background-color: #ea7900c1;
     color: aliceblue;
     border-radius: 50px;
     padding: 10px;
@@ -30,7 +35,7 @@ h1 {
 }
 
 .calculadora {
-    background-color: rgba(162, 162, 162, 0.308);
+    background-color: #a2a2a24f;
     border-radius: 30px;
     padding: 10px;
     box-shadow: 0px 0px 4px rgba(36, 36, 36, 0.442);
@@ -42,7 +47,7 @@ h1 {
     border: 0;
     height: 8px;
     width: 185px;
-    background-color: rgba(0, 0, 0, 0.29);
+    background-color: rgba(0, 0, 0, 0.475);
     text-align: right;
     padding: 20px;
     font-size: 2em;
@@ -75,7 +80,7 @@ td {
 
 .btn-top {
     background-color: rgba(255, 255, 255, 0.751);
-    color: rgb(109, 109, 109);
+    color: #6d6d6d;
 }
 
 .btn-igual {
@@ -92,10 +97,72 @@ td {
     color: rgb(109, 109, 109);
 }
 
-.btn-side:hover {
+.btn-side:hover, .historico:hover {
     background-color: rgb(234, 121, 0);
 }
 
 .btn-top:hover {
     background-color: rgb(255, 255, 255);
+}
+
+.historico {
+    background-color: #ea7900c1;
+    width: 140px;
+    height: 30px;
+    border-radius: 30px;
+    border: 0;
+    align-self: center;
+    margin-top: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: 900px;
+    font-size: 1.1em;
+}
+
+.barra {
+    background-color: #a2a2a24f;
+    width: 0px;
+    height: 300px;
+    border-radius: 30px;
+    align-self: center;
+    justify-self: center;
+    margin-left: 0px;
+    transition: .5s;
+    margin-left: 10px;
+    margin-top: 50px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.4s ease-out, width .3s, transform .3s ease-out;
+}
+
+.barra h1 {
+    color: white;
+    text-align: center;
+    font-size: .8em;
+    border-bottom: 1px solid white;
+} 
+
+
+.barra.show {
+    width: 100px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.close {
+    border-radius: 30px;
+    width: 50px;
+    height: 30px;
+    background-color: rgba(151, 151, 151, 0.588);
+    text-align: center;
+    border: 0;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
 }
