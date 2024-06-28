@@ -63,6 +63,10 @@ function calcula() {
             barra.appendChild(text);
 
             for (conta of this.contas) {
+                if (this.contas.length > 10) {
+                    criaP.parentElement.remove();
+                }
+
                 const criaP = document.createElement('p');
                 criaP.classList.add('pH')
                 criaP.textContent = conta;
@@ -90,7 +94,10 @@ function calcula() {
                     return this.fazConta(values);
                 } else if (el.classList.contains('historico')) {
                     const cl = document.querySelector('.close');
-                    return this.criaHistorico(), cl.parentElement.remove();
+                    if (cl) {
+                        cl.parentElement.remove();
+                    };
+                    return this.criaHistorico();
                 } else if (el.classList.contains('close')) {
                     el.parentElement.remove();
                 }

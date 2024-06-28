@@ -126,7 +126,7 @@ td {
 .barra {
     background-color: #a2a2a24f;
     min-width: 0px;
-    height: 320px;
+    min-height: 320px;
     border-radius: 30px;
     align-self: center;
     justify-self: center;
@@ -137,6 +137,7 @@ td {
     color: white;
     display: flex;
     flex-flow: column wrap;
+    justify-content: space-between;
     opacity: 0;
     transform: translateX(-20px);
     transition: opacity 0.4s ease-out, width .3s, transform .3s ease-out;
@@ -146,7 +147,7 @@ td {
     color: white;
     text-align: center;
     font-size: 1em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 } 
 
 
@@ -167,7 +168,7 @@ td {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 .pH {
     text-align: center;
