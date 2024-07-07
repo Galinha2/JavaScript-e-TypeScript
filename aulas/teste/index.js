@@ -1,18 +1,9 @@
-let numerosPares = [];
-let numerosImpares = [];
+function random() {
 
-for (i = 0; i < 5; i++) {
-    
-    let random = Math.random() * 10;
+    for (let c = 0; c = 6; c++) {
+        let numero = Math.random() * 10;
+        return numero;
+    };
+};
 
-    let inteiro = parseInt(random);
-    
-    if (inteiro % 2 === 0) {
-        numerosPares.push(inteiro);
-    } else {
-        numerosImpares.push(inteiro);
-    }
-}
-
-console.log(numerosPares);
-console.log(numerosImpares);
+console.log(random());
