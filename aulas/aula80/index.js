@@ -1,14 +1,13 @@
-const pessoas = [
-    {id: 1, nome: 'Henrique Galinha'},
-    {id: 2, nome: 'Lucas Augusto'},
-    {id: 3, nome: 'Susana Pina'},
-];
+class Pessoa {
+    constructor(nome, sobrenome) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+    };
 
-const pessoaNova = {};
-
-for (const pessoa of pessoas) {
-    const {id} = pessoa;
-    pessoaNova[id] = {...pessoa};
+    fala() {
+        console.log(this.nome, this.sobrenome, 'Está a falar')
+    }
 };
 
-console.log(pessoaNova);
+const pessoa1 = new Pessoa('Henrique', 'Galinha');
+pessoa1.fala();
