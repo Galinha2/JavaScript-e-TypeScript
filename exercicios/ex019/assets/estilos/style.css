@@ -21,7 +21,7 @@ main {
     background-size: cover;
 }
 
-div {
+#formulario {
     background-color: rgba(159, 159, 159, 0.853);
     backdrop-filter: blur(2px);
     padding: 20px;
@@ -69,4 +69,10 @@ input {
     margin-top: 20px;
     text-align: center;
     cursor: pointer;
+}
+
+.erro {
+    color: red;
+    font-size: .7em;
+    margin-top: 5px;
 }

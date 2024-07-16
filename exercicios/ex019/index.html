@@ -8,20 +8,32 @@
 </head>
 <body>
     <main>
-        <div>
+        <div id="formulario">
             <h1>Formulário de inscrição</h1>
             <form action="">
-                <p>Nome:<input type="text" name="inome" class="nome"></p>
+                <div class="nomeErrado">
+                    <p>Nome:<input type="text" name="inome" class="nome"></p>
+                </div>
                 
-                <p>Apelido:<input type="text" name="iapelido" class="apelido"></p>
+                <div class="apelidoErrado">
+                    <p>Apelido:<input type="text" name="iapelido" class="apelido"></p>
+                </div>
                 
-                <p>CPF:<input type="text" name="icpf" class="cpf"></p>
+                <div class="cpfErrado">
+                    <p>CPF:<input type="text" name="icpf" class="cpf"></p>
+                </div>
                 
-                <p>Usuário:<input type="text" name="iusuario" class="usuario"></p>
+                <div class="userErrado">
+                    <p>Usuário:<input type="text" name="iusuario" class="usuario"></p>
+                </div>
                 
-                <p>Senha:<input type="text" name="isenha" class="senha"></p>
+                <div class="senhaErrado">
+                    <p>Senha:<input type="password" name="isenha" class="senha"></p>
+                </div>
                 
-                <p>Repetir Senha:<input type="text" name="irepetirSenha" class="repetirSenha"></p>
+                <div class="repetirErrado">
+                    <p>Repetir Senha:<input type="password" name="irepetirSenha" class="repetirSenha"></p>
+                </div>
 
             </form>
             <input class="send" type="submit" value="Enviar">
