@@ -17,7 +17,10 @@ class Form {
                 const contenudoNome = nome.value;
            
                 if (contenudoNome.length > 5) {
-                    console.log('muito grande');
+                    const nomes = document.createElement('p');
+                    nomes.classList.add('teste');
+                    nomes.textContent = 'oiiiiiiii';
+                    this.main.innerHTML += 'muito grande!';
                 };
                });
             };
